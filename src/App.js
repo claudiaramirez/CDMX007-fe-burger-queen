@@ -1,14 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-//import logo from './logo.svg';
-import Home from './components/home';
+// import logo from './logo.svg';
+import Home from './views/home';
 import Pagar from './components/pagar';
 import Navbar from './components/navbar';
-import Breakfast from './components/breakfast';
-import Hamburger from './components/hamburger';
-import Drinks from './components/drinks';
-import Complements from './components/complements';
 import TotalProducts from './components/total';
+import Products from './components/products';
 
 import './App.css';
 function App() {
@@ -18,14 +15,15 @@ function App() {
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <Navbar title="icon home" />
-        <TotalProducts title="icon home" />
-        <Route exact path="/" render={() => <Home title="Hola desde home" /> } />
+        <TotalProducts title="products" />
+        {/* <Route exact path="/" render={() => <Home title="Hola desde home" /> } /> */}
+        <Route exact path="/" component={Home} />
         <Route path="/pagar" component={Pagar} />
-        <Route path="/breakfast" component={Breakfast} />
-        <Route path="/hamburger" component={Hamburger} />
-        <Route path="/drinks" component={Drinks} />
-        <Route path="/complements" component={Complements} />
-      {/* </header> */}
+        <Route path="/breakfast" component={Products} />
+        <Route path="/hamburger" component={Products} />
+        <Route path="/drinks" component={Products} />
+        <Route path="/complements" component={Products} /> 
+       {/* </header>  */}
     </div>
     </BrowserRouter>
   );

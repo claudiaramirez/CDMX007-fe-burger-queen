@@ -1,0 +1,29 @@
+
+.header{
+    width: 70%;
+}
+nav{
+    box-shadow: none;
+}
+nav .nav-wrapper{
+    padding: 0 10px;
+    background-color: #fac105;
+}
+.nav-menu_link{
+    font-weight: 700;
+    color:#3F3F3F;
+    font-size: 1.2rem;
+} 
+.nav-menu_link:hover{
+    background: none;
+    color: #fff;
+} 
+.nav-menu_link.activate{
+    color: #721a16;
+}  
+.App-logo {
+    margin-top: 2px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}      

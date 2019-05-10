@@ -1,15 +1,20 @@
 import React from 'react';
+import './total.css';
 const TotalProducts = (props) =>(
     <div className='total'>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <ul class="nav-menu">
-            <li className="nav-menu_total">Cantidad</li>
-            <li className="nav-menu_total">Producto</li>
-            <li className="nav-menu_total">Precio</li>
+          <ul class="total-description">
+            <li className="nav-menu_total"><span class="total-title">Cantidad</span></li>
+            <li className="nav-menu_total"><span class="total-title">Producto</span></li>
+            <li className="nav-menu_total"> <span class="total-title">Precio</span></li>
          </ul>
          <p>Total<span>$45</span></p>
-         <a href="#">Cancelar</a>
-         <a href="#">Confirmar orden</a>
+         <div class="buttons-order">
+          <a class="btn">Cancelar</a>
+          <a class="waves-effect waves-light btn">Confirmar</a>
+         </div>
+        
+        
     </div>
 );
 

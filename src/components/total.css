@@ -1,0 +1,50 @@
+.total{
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    width: 30%;
+    min-height: 500px;
+}
+.total .total-description{
+    width: 100%;
+    line-height: 64px;
+    margin: 0;
+    height: 64px;
+}
+.total-description .nav-menu_total{
+    width: 30%;
+    display: inline-block;
+
+}
+.nav-menu_total .total-title{
+    font-weight: 700;
+    font-size: 1.2rem;
+} 
+.waves-effect .waves-light .btn{
+     border-radius: 7px;
+}
+.buttons-order{
+    justify-content: space-around;
+    display: flex;
+}
+.btn{
+    text-transform: capitalize;
+    width: 120px;
+    line-height: 50px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid #721a16;
+    color: #721a16;
+    background-color: #fff;
+}
+.btn:hover{
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #721a16;
+}
