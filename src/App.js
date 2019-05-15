@@ -37,7 +37,7 @@ class App extends Component {
         <div>
          
           <RouterHome/>
-          <Home />
+          {/* <Home /> */}
         </div>
         ) :(<Login />)}
       </div>

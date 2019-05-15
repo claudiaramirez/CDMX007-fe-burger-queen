@@ -1,6 +1,5 @@
 {
   "products":[{
-  "breakfast":[{
     "id": "SD_001",
     "product": "Sandwich de jamón y queso",
     "price": "$35.00",
@@ -21,9 +20,9 @@
     "product": "Café con leche",
     "price":"$20.00",
     "img": "https://i.ibb.co/wZtLt71/coffe.png"
-  }],
+  },
 
-    "hamburguer":[{
+   {
      "id": "HB-001",
      "product": "Hamburguesa sencilla res",
         "price": "$40.00",
@@ -65,9 +64,9 @@
     "product": "Huevo",
     "price": "$15.00",
     "img": "https://i.ibb.co/2vtKvDW/fried-egg.png"
-  }],
+  },
 
-  "drinks":[{
+  {
      "id": "SA-001",
      "product": "Refresco",
      "price": "$10.00",
@@ -77,9 +76,9 @@
     "product": "Agua",
     "price": "$15.00",
     "img": "https://i.ibb.co/23f5H7r/water-1.png"
-  }],
+  },
 
-  "complements":[{
+  {
     "id": "FC-001",
     "product": "Papas a la francesa",
     "price": "$15.00",
@@ -89,6 +88,5 @@
    "product": "Aros de cebolla",
    "price": "$15.00",
    "img": "https://i.ibb.co/SXfWHXh/onion-rings.png"
- }]
  }]
 }

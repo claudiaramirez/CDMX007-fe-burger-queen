@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
-//import Home from './views/home';
+import Home from './views/home';
 import Pagar from './views/pagar';
 //import login from './views/login';
 import Navbar from './components/navbar/navbar';
@@ -16,7 +16,7 @@ function App() {
         <Navbar title="icon home" />
         <TotalProducts title="products" />
         {/* <Route exact path="/" render={() => <Home title="Hola desde home" /> } /> */}
-        {/* <Route exact path="/" component={Home} /> */}
+        <Route exact path="/" component={Home} />
         <Route path="/pagar" component={Pagar} />
         {/* <Route path="/login" component={login} /> */}
         <Route path="/breakfast" component={Products} />
