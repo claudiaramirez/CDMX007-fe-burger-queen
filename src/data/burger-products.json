@@ -1,0 +1,131 @@
+{
+  "products":[{
+    "id": "SD_001",
+    "product": "Sandwich de jamón y queso",
+    "price": "$35.00",
+    "img": "https://i.ibb.co/pJbWY3x/bread.png",
+    "type": 
+      "breakfast"
+    },
+    {
+    "id": "JN-001",
+    "product": "Jugo Natural",
+    "price": "$15.00",
+    "img": "https://i.ibb.co/kQPx672/orange-juice.png",
+    "type": 
+      "breakfast"
+    },
+    {
+    "id": "CF-001",
+    "product": "Café americano",
+    "price": "$20.00",
+    "img": "https://i.ibb.co/KD3MfS2/coffee-cup.png",
+    "type": 
+      "breakfast"
+    },
+    {
+    "id": "CF-002",
+    "product": "Café con leche",
+    "price":"$20.00",
+    "img": "https://i.ibb.co/wZtLt71/coffe.png",
+    "type": 
+      "breakfast"
+    },
+    {
+    "id": "HB-001",
+    "product": "Hamburguesa sencilla res",
+    "price": "$40.00",
+    "img": "https://i.ibb.co/TYCCWft/burger.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-002",
+    "product": "Hamburguesa doble res",
+    "price": "$55.00",
+    "img": "https://i.ibb.co/sHRLgpm/burger-doble.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-003",
+    "product": "Hamburguesa sencilla pollo",
+    "price": "$40.00",
+    "img": "https://i.ibb.co/TYCCWft/burger.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-004",
+    "product": "Hamburguesa doble pollo",
+    "price": "$55.00",
+    "img": "https://i.ibb.co/sHRLgpm/burger-doble.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-005",
+    "product": "Hamburguesa sencilla vegetariana",
+    "price": "$40.00",
+    "img": "https://i.ibb.co/TYCCWft/burger.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-006",
+    "product": "Hamburguesa doble vegetariana",
+    "price": "$55.00",
+    "img": "https://i.ibb.co/sHRLgpm/burger-doble.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-006",
+    "product": "Extra queso",
+    "price": "$15.00",
+    "img": "https://i.ibb.co/YQDN8kZ/cheese.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "HB-007",
+    "product": "Huevo",
+    "price": "$15.00",
+    "img": "https://i.ibb.co/2vtKvDW/fried-egg.png",
+    "type": 
+      "hamburguer"
+    },
+    {
+    "id": "SA-001",
+    "product": "Refresco",
+    "price": "$10.00",
+    "img": "https://i.ibb.co/G3w7QC1/cola.png",
+    "type": 
+      "drinks"
+    },
+    {
+    "id": "WT-001",
+    "product": "Agua",
+    "price": "$15.00",
+    "img": "https://i.ibb.co/23f5H7r/water-1.png",
+    "type": 
+      "drinks"
+    },
+    {
+    "id": "FC-001",
+    "product": "Papas a la francesa",
+    "price": "$15.00",
+    "img": "https://i.ibb.co/ncLX5r2/fried-potatoes.png",
+    "type": 
+      "complements"
+    },
+    {
+    "id": "AC-001",
+    "product": "Aros de cebolla",
+    "price": "$15.00",
+    "img": "https://i.ibb.co/SXfWHXh/onion-rings.png",
+    "type":
+      "complements"
+    }
+  ]
+}
