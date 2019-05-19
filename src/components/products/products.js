@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import './products.css';
 import RouterHome from '../../RouterHome';
 import {Route} from 'react-router-dom';
+import TotalProducts from '../total/total';
+
 class Products extends Component{
     constructor(props){
         super(props);
@@ -10,6 +12,7 @@ class Products extends Component{
             isLoaded: false,
         }
     }
+   
     componentDidMount(){
         fetch('https://burgerqueenmx.firebaseio.com/products.json')
         .then(response => response.json())
@@ -22,8 +25,34 @@ class Products extends Component{
             })
         });
     }
+
+    // componentWillUpdate(nextProps, nextState){
+    //     localStorage.setItem('items' , JSON.stringify(nextState.items));
+    //     localStorage.setItem('itemsDate' , Date.now());
+
+    // }
+     
+    //   handleClick = (e) =>{ 
+    //     e.preventDefault(); 
+    //     console.log(this.state.items);        
+    //     console.log(this.state.items[e])      
+    //     // this.setState({inputTerms: e.target.checked})  
+    //   }
+
+
+
+
+
     render()
     {
+        // const productComponents = items.map((item) => (
+        //     <Products
+        //       key={'product-' + products.id}
+        //       id={products.id}
+              
+        //     />
+        //   ));
+
         var { isLoaded, items} = this.state;
         if(!isLoaded){
             return <div>Cargando...</div>
@@ -31,8 +60,8 @@ class Products extends Component{
         else if(window.location.href.includes('breakfast')){
             return(
                 <div className="products">
-                    {items.filter(item => item.type === "breakfast").map(item => 
-                        <button class="card-main">
+                    {items.filter(item => item.type === "breakfast").map((item,i) => 
+                        <button class="card-main" key={i} id={item.id} onClick={this.handleClick} >
                             <div class="card-image">
                                 <div className="border-img">
                                     <img className="img"  src={item.img}/>
@@ -43,8 +72,10 @@ class Products extends Component{
                                 <p className="item_price">{item.price}</p>
                             </div>
                        </button> 
+                       
                     )}     
                 </div>
+                // {productComponents}
             );
         }else if(window.location.href.includes('hamburger')){
             return(
@@ -104,3 +135,32 @@ class Products extends Component{
     }
 }
 export default Products;
+
+
+
+ // componentWillMount(){
+    //     localStorage.getItem('items') && this.setState({
+    //      items: JSON.parse(localStorage.getItem('items')),
+    //      isLoaded: false
+    //     });
+    // }
+    // componentDidMount(){
+    //     if(!localStorage.getItem('items')){
+    //        this.fetchData();
+    //     }else{
+    //         console.log('hola data en localstorage');
+    //     }
+        
+    // }
+    // fetchData(){
+    //     fetch('https://burgerqueenmx.firebaseio.com/products.json')
+    //     .then(response => response.json())
+    //     // if hamburger - muestrame sòlo ese pedazo del json
+    //     .then((findresponse) =>{
+    //         // console.log(findresponse);
+    //         this.setState({
+    //             isLoaded: true,
+    //             items: findresponse, 
+    //         })
+    //     });
+    // }

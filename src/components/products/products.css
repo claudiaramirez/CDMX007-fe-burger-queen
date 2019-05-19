@@ -16,10 +16,9 @@
     width: 250px;
     margin-bottom: 20px;
     background: #fff;
-    border: 2px solid #eeece6;
+    border: 2px solid #b7b7b7;
     border-radius: 10px; 
 }
-
 .border-img{
     border: 1px solid #fac105;
     width: 90px;
@@ -31,9 +30,16 @@
     margin-top: 10px;
     width: 60px;
 }
+.card-content{
+    width: 100%;
+    padding-left: 10px;
+}
 .item_price,
 .item_product{
     font-size: 1.2rem;
-    text-align: right;
+    text-align: left;
     color:  #757575;
+}
+.item_price{
+    font-size: 1.4rem;
 }

@@ -23,6 +23,9 @@
     font-size: 1.2rem;
     color: #3f3f3f;
 } 
+.list-products{
+    height: 75vh;
+}
 .waves-effect .waves-light .btn{
      border-radius: 7px;
 }
@@ -33,7 +36,7 @@
 .btn-cancel,
 .btn-send{
     text-transform: capitalize;
-    width: 120px;
+    width: 110px;
     line-height: 50px;
     height: 50px;
     font-weight: 700;
