@@ -1,18 +1,45 @@
 
 .header{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 70%;
-}
-nav{
-    box-shadow: none;
-}
-nav .nav-wrapper{
-    padding: 0 10px;
+    z-index: 10;
+    max-height: 80px;
+    padding: 5px 10px;
+    text-align: right;
     background-color: #fac105;
 }
+.App-logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}   
+.logo{
+    float: left;
+}
+.items{ 
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    line-height: 40px;
+    padding: 0;
+}
+
+.item-menu{
+    list-style: none;
+
+}
+
 .nav-menu_link{
     font-weight: 700;
     color:#3F3F3F;
     font-size: 1.2rem;
+    text-decoration: none;
 } 
 .nav-menu_link:hover{
     background: none;
@@ -21,9 +48,4 @@ nav .nav-wrapper{
 .nav-menu_link.activate{
     color: #721a16;
 }  
-.App-logo {
-    margin-top: 2px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-}      
+   

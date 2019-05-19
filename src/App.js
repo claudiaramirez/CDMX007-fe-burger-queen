@@ -32,17 +32,14 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+       <div className="App">
         {this.state.user ? (
         <div>
-         
           <RouterHome/>
-          {/* <Home /> */}
         </div>
         ) :(<Login />)}
-      </div>
+       </div>
     );
   }
 }
-
 export default App;

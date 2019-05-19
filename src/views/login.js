@@ -1,32 +1,8 @@
-// import React from 'react';
-
-// const Pagar = (props) =>(
-    
-//     <div className='login'>
-//         <form class="col s12">
-//             <div class="row">
-//                 <div class="input-field col s6">
-//                     <input id="email" type="email" class="validate"/>
-//                     <label for="email">Usuario</label>
-//                 </div>
-//             </div>
-//             <div class="row">
-//                 <div class="input-field col s6">
-//                     <input  id="password" type="password" class="validate"/>
-//                     <label for="password">Contraseña</label>
-//                 </div>
-//             </div>
-//         </form>
-//         <button>Iniciar sesion</button>
-//     </div>
-
-// );
-
-// export default Pagar;
-
 import React, { Component } from 'react';
 //import { Link } from 'react-router-dom';
 import fire from '../config/Fire';
+import logo from '../assets/logo.jpg';
+import './login.css'
 
 class Login extends Component {
   constructor(props) {
@@ -62,21 +38,22 @@ class Login extends Component {
   }
   render() {
     return (
-        <form>
-            <div >
-            {/* <label for="exampleInputEmail1">Email address</label> */}
-            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-            {/* <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> */}
-            </div>
-            <div >
-            {/* <label for="exampleInputPassword1">Password</label> */}
-            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1"/>
-            </div>
-            <button type="submit" onClick={this.login} class="btn btn-primary">Iniciar Sesión</button>
-            <button onClick={this.signup} class="btn btn-success">Registro</button>
-        </form>
- 
- 
+      <div className="login">
+        <div className="logo_right">
+          <img src={logo} className="logo-login" alt="logo" />
+        </div>
+        <div className="form_left">
+          <form>
+              <h1 className="title-login">Inicio de sesión</h1>
+              <p className="subtitles-form">Empleado</p>
+              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre"/>
+              <p className="subtitles-form">Contraseña</p>
+              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Solo 4 digitos"/>
+              <button type="submit" onClick={this.login} className="btn-signin">Entrar</button>
+              <p className="registrer">¿Aún no tienes cuenta?<a onClick={this.signup} className="btn-signup"> Registrate</a></p>
+          </form>
+        </div>
+      </div>
     );
   }
 }

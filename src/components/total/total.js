@@ -10,8 +10,8 @@ const TotalProducts = (props) =>(
          </ul>
          <p>Total<span>$45</span></p>
          <div class="buttons-order">
-          <a class="btn">Cancelar</a>
-          <a class="waves-effect waves-light btn">Confirmar</a>
+          <a class="btn-cancel">Cancelar</a>
+          <a class="btn-send">Confirmar</a>
          </div>
         
         

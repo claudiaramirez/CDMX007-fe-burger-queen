@@ -10,16 +10,14 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
         <Navbar title="icon home" />
-        <TotalProducts title="products" />
         <Route exact path="/" component={Home} />
         <Route path="/pagar" component={Pagar} />
         <Route path="/breakfast" component={Products} />
         <Route path="/hamburger" component={Products} />
         <Route path="/drinks" component={Products} />
         <Route path="/complements" component={Products} /> 
-    </div>
+        <TotalProducts title="products" />
     </BrowserRouter>
   );
 }

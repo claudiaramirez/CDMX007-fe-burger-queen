@@ -30,81 +30,73 @@ class Products extends Component{
         } 
         else if(window.location.href.includes('breakfast')){
             return(
-                <div className="Products">
+                <div className="products">
                     {items.filter(item => item.type === "breakfast").map(item => 
-                        <div class="col s3 m3 l3">
-                            <div class="card horizontal">
+                        <button class="card-main">
                             <div class="card-image">
-                                <img src={item.img}/>
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <p>{item.product}</p>
-                                    <p>{item.price}</p>
-                                </div>
+                                <div className="border-img">
+                                    <img className="img"  src={item.img}/>
                                 </div>
                             </div>
-                        </div>
+                            <div class="card-content">
+                                <p className="item_product">{item.product}</p>
+                                <p className="item_price">{item.price}</p>
+                            </div>
+                       </button> 
                     )}     
-                </div>    
+                </div>
             );
         }else if(window.location.href.includes('hamburger')){
             return(
-                <div className="Products">
+                <div className="products">
                     {items.filter(item => item.type === "hamburguer").map(item => 
-                        <div class="col s3 m3 l3">
-                            <div class="card horizontal">
+                        <button class="card-main">
                             <div class="card-image">
-                                <img src={item.img}/>
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <p>{item.product}</p>
-                                    <p>{item.price}</p>
-                                </div>
+                                <div className="border-img">
+                                    <img className="img"  src={item.img}/>
                                 </div>
                             </div>
-                        </div>
+                            <div class="card-content">
+                                <p className="item_product">{item.product}</p>
+                                <p className="item_price">{item.price}</p>
+                            </div>
+                       </button> 
                     )}       
                 </div>    
             );
         }else if(window.location.href.includes('drinks')){
             return(
-                <div className="Products">
+                <div className="products">
                     {items.filter(item => item.type === "drinks").map(item => 
-                        <div class="col s3 m3 l3">
-                            <div class="card horizontal">
+                        <button class="card-main">
                             <div class="card-image">
-                                <img src={item.img}/>
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <p>{item.product}</p>
-                                    <p>{item.price}</p>
-                                </div>
+                                <div className="border-img">
+                                    <img className="img"  src={item.img}/>
                                 </div>
                             </div>
-                        </div>
+                            <div class="card-content">
+                                <p className="item_product">{item.product}</p>
+                                <p className="item_price">{item.price}</p>
+                            </div>
+                        </button> 
                     )}       
                 </div>    
             );
         }else if(window.location.href.includes('complements')){
             return(
-                <div className="Products">
+                <div className="products">
                     {items.filter(item => item.type === "complements").map(item => 
-                        <div class="col s3 m3 l3">
-                            <div class="card horizontal">
+                        <button class="card-main">
                             <div class="card-image">
-                                <img src={item.img}/>
-                            </div>
-                            <div class="card-stacked">
-                                <div class="card-content">
-                                    <p>{item.product}</p>
-                                    <p>{item.price}</p>
+                                <div className="border-img">
+                                    <img className="img"  src={item.img}/>
                                 </div>
                             </div>
-                        </div>
-                        </div>
+                            <div class="card-content">
+                                <p className="item_product">{item.product}</p>
+                                <p className="item_price">{item.price}</p>
+                            </div>
+                        </button> 
                     )}       
                 </div>    
             );

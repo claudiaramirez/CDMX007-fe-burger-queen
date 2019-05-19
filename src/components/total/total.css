@@ -1,25 +1,27 @@
 .total{
+    position: fixed;
     top: 0;
     right: 0;
-    position: absolute;
     text-align: center;
     width: 30%;
-    min-height: 500px;
+    min-height: 768px;
 }
 .total .total-description{
+    flex-flow: row wrap;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
     width: 100%;
-    line-height: 64px;
+    line-height: 80px;
     margin: 0;
-    height: 64px;
+    height: 80px;
 }
-.total-description .nav-menu_total{
-    width: 30%;
-    display: inline-block;
-
-}
-.nav-menu_total .total-title{
+.nav-menu_total{
+    list-style: none;
+} .total-title{
     font-weight: 700;
     font-size: 1.2rem;
+    color: #3f3f3f;
 } 
 .waves-effect .waves-light .btn{
      border-radius: 7px;
@@ -28,7 +30,8 @@
     justify-content: space-around;
     display: flex;
 }
-.btn{
+.btn-cancel,
+.btn-send{
     text-transform: capitalize;
     width: 120px;
     line-height: 50px;
@@ -41,7 +44,7 @@
     color: #721a16;
     background-color: #fff;
 }
-.btn:hover{
+.btn-send{
     border-radius: 10px;
     box-shadow: none;
     border: 1px solid #fff;
