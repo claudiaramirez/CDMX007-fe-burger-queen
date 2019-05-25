@@ -17,7 +17,29 @@
     margin-bottom: 20px;
     background: #fff;
     border: 2px solid #b7b7b7;
-    border-radius: 10px; 
+    border-radius: 10px;
+    outline: 0;
+    position: relative;
+    box-shadow: 0 0 5px  rgba(0,0,0,.2);
+    overflow: hidden; 
+}
+.card-main:active{
+    border-color: #721a16;
+}
+.card-main button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 0;
+    color: transparent;
+    outline:none;
+    cursor: pointer;
+    z-index: 2;
 }
 .border-img{
     border: 1px solid #fac105;
@@ -38,8 +60,14 @@
 .item_product{
     font-size: 1.2rem;
     text-align: left;
-    color:  #757575;
+    color:  #1d1d1d;
 }
 .item_price{
     font-size: 1.4rem;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    margin-bottom: .5em;
+    z-index: 1;
 }

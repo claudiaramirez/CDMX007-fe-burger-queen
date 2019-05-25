@@ -3,8 +3,10 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Home from './views/home';
 import Pagar from './views/pagar';
 import Navbar from './components/navbar/navbar';
-import TotalProducts from './components/total/total';
+//import TotalProducts from './components/total/total';
 import Products from './components/products/products';
+
+
 
 import './App.css';
 function App() {
@@ -17,7 +19,7 @@ function App() {
         <Route path="/hamburger" component={Products} />
         <Route path="/drinks" component={Products} />
         <Route path="/complements" component={Products} /> 
-        <TotalProducts title="products" />
+        {/* <TotalProducts title="products" /> */}
     </BrowserRouter>
   );
 }
