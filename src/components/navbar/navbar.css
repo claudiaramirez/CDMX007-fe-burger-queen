@@ -47,5 +47,11 @@
 } 
 .nav-menu_link.activate{
     color: #721a16;
-}  
+} 
+.nav-menu_link.logout{
+    
+    border-bottom:1px solid #3F3F3F ;
+} 
+
+
    

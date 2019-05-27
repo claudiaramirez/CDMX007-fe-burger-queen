@@ -46,9 +46,9 @@ class Login extends Component {
           <form>
               <h1 className="title-login">Inicio de sesión</h1>
               <p className="subtitles-form">Empleado</p>
-              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre"/>
+              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre"/>
               <p className="subtitles-form">Contraseña</p>
-              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Solo 4 digitos"/>
+              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" className="form-control" id="exampleInputPassword1" placeholder="Solo 4 digitos"/>
               <button type="submit" onClick={this.login} className="btn-signin">Entrar</button>
               <p className="registrer">¿Aún no tienes cuenta?<a onClick={this.signup} className="btn-signup"> Registrate</a></p>
           </form>

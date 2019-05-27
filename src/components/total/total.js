@@ -21,4 +21,5 @@ const TotalProducts = (props) =>(
     </div>
 );
 
+
 export default TotalProducts;

@@ -2,7 +2,8 @@
 
 Prototipo de alta fideldad
 
-[Prototipo](https://xd.adobe.com/view/8169d117-72d5-4939-5468-5d34dd7183c5-f758/)
+![iniciosesion](./src/assets/inicio.png) 
+
 
 ## Preámbulo
 

@@ -12,23 +12,124 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
-    height: 200px;
-    width: 250px;
+    height: 140px;
+    width: 100%;
+    max-width: 320px;
     margin-bottom: 20px;
-    background: #fff;
-    border: 2px solid #b7b7b7;
-    border-radius: 10px; 
+    border: 2px solid rgba(0,0,0,.2);
+    border-radius: 10px;
+    outline: 0;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    overflow: hidden;
+    transition: border linear .35s, box-shadow linear .60s;
+    -webkit-transition: border linear .35s, box-shadow linear .60s;
+    -moz-transition: border linear .35s, box-shadow linear .60s;
+    -ms-transition: border linear .35s, box-shadow linear .60s;
+    -o-transition: border linear .35s, box-shadow linear .60s;
+}
+.card-main:active{
+    border-color: #721a16;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.card-main:active .card-image{
+    transform: scale(1.25,1.25);
+    -webkit-transform: scale(1.25,1.25);
+    -moz-transform: scale(1.25,1.25);
+    -ms-transform: scale(1.25,1.25);
+    -o-transform: scale(1.25,1.25);
+}
+
+.products .card-main button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(250, 193, 5, .3);
+    /* background: rgba(114, 26, 22, .3); */
+    opacity: 0;
+    border-radius: 100%;
+    transform-origin: 50% 50%;
+    transform: scale(3, 3) translate(-50%);
+    -webkit-transform: scale(3, 3) translate(-50%);
+    -moz-transform: scale(3, 3) translate(-50%);
+    -ms-transform: scale(3, 3) translate(-50%);
+    -o-transform: scale(3, 3) translate(-50%);
+}
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+      -webkit-transform: scale(0, 0);
+      -moz-transform: scale(0, 0);
+      -ms-transform: scale(0, 0);
+      -o-transform: scale(0, 0);
+    }
+    20% {
+      transform: scale(40, 40);
+      opacity: 1;
+      -webkit-transform: scale(40, 40);
+      -moz-transform: scale(40, 40);
+      -ms-transform: scale(40, 40);
+      -o-transform: scale(40, 40);
+}
+    100% {
+      opacity: .25;
+      transform: scale(70, 70);
+      -webkit-transform: scale(70, 70);
+      -moz-transform: scale(70, 70);
+      -ms-transform: scale(70, 70);
+      -o-transform: scale(70, 70);
+}
+  }
+  
+  .products .card-main button:focus:not(:active)::after {
+    animation: ripple .60s ease-out;
+    -webkit-animation: ripple .60s ease-out;
+
+}
+  
+.products .card-main button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 0;
+    color: transparent;
+    outline:none;
+    cursor: pointer;
+    z-index: 2;
+    border:0;
+    transition: all linear .60s;
+    -webkit-transition: all linear .60s;
+    -moz-transition: all linear .60s;
+    -ms-transition: all linear .60s;
+    -o-transition: all linear .60s;
+}
+.card-main .card-image{
+    transition: all linear .15s;
+    -webkit-transition: all linear .15s;
+    -moz-transition: all linear .15s;
+    -ms-transition: all linear .15s;
+    -o-transition: all linear .15s;
 }
 .border-img{
     border: 1px solid #fac105;
-    width: 90px;
-    height: 90px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     text-align: center;
 }
 .img{
     margin-top: 10px;
-    width: 60px;
+    width: 40px;
 }
 .card-content{
     width: 100%;
@@ -38,8 +139,55 @@
 .item_product{
     font-size: 1.2rem;
     text-align: left;
-    color:  #757575;
+    color:  #1d1d1d;
 }
 .item_price{
-    font-size: 1.4rem;
+    font-size: 1.2em;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+    margin-bottom: .5em;
+    z-index: 1;
+}
+
+/* loader */
+.wpLoader{
+    position:fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fac105;
+}
+#loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+ 
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+.wpLoader span{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% + 30px);
+    color: #3F3F3F;
 }
