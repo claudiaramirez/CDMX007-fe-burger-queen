@@ -15,8 +15,9 @@
 
 Prototipo de alta fideldad
 ![iniciosesion](./src/assets/inicio.png) 
-![iniciosesion](./src/assets/productos.png) 
-![iniciosesion](./src/assets/pago.png) 
+![productos](./src/assets/productos.png)
+![productosagregados](./src/assets/add.png)  
+![pago](./src/assets/pago.png) 
 
 
 
