@@ -13,12 +13,12 @@ function App() {
   return (
     <BrowserRouter>
         <Navbar title="icon home" />
-        <Route exact path="/" component={Home} />
-        <Route path="/pagar" component={Pagar} />
+        <Route exact path="/pagar" component={Pagar} />
         <Route path="/breakfast" component={Products} />
         <Route path="/hamburger" component={Products} />
         <Route path="/drinks" component={Products} />
         <Route path="/complements" component={Products} /> 
+        <Route path="/" component={Navbar} />
         {/* <TotalProducts title="products" /> */}
     </BrowserRouter>
   );

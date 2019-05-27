@@ -26,7 +26,6 @@
 } 
 .productsAdded{
     height: calc(100% - 150px);
-   
     padding-left: 1rem;
     padding-right: 1rem;
     padding-bottom: 50px;
@@ -37,7 +36,22 @@
     overflow-y: auto;
     height: 100%;
     width: 100%;
-    padding-top: 2rem;
+    padding-top: .5rem;
+    position: relative;
+    border-top: 1px solid rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0,0,0,.05);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.productsAdded:before{
+    content:"";
+    position: absolute;
+    left: .5rem;
+    top: 0;
+    right: .5rem;
+    height: 1px;
+    margin: auto;
+    box-shadow: 0 1px 15px  rgba(0,0,0,.3)
 }
 .productsAdded .total-products{
     display: inline-block;
@@ -46,19 +60,23 @@
     font-size: 1.5em;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
     left: 0;
     padding-left: 2rem;
+    line-height: 40px;
 }
 .productsAdded .total-products span{
     padding-right: .5rem;
+    font-size: 1.2rem;
 }
 .productsAdded .total-products p{
+    font-weight: 600;
     display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
 }
 .list-products .card-main{
+    background-color: #fff;
     height: auto;
     width: 100%;
     display: flex;
@@ -67,10 +85,16 @@
     padding-bottom: 2em;
     font-size: 0;
     min-height: 60px;
+    transition:all linear .25s;
+    -webkit-transition:all linear .25s;
+    -moz-transition:all linear .25s;
+    -ms-transition:all linear .25s;
+    -o-transition:all linear .25s;
 }
 .list-products .card-main .number,
 .list-products .card-main .item_product,
-.list-products .card-main .item_price{
+.list-products .card-main .item_price,
+.list-products .card-main .cancel-product{
     display: inline-block;
     vertical-align: middle;
     margin: 0;
@@ -81,11 +105,20 @@
     padding-right: 0.5em;
 }
 .list-products .card-main .item_price{
-    width: 30%;
+    width: 20%;
     position:static;
 }
 .list-products .card-main .number{
+    width: 10%;
+    text-align: left;
+}
+.cancel-product{
+    border: none;
+    background-color: #fff;
     width: 20%;
+}
+.img-cancel{
+    width: .8em;
 }
 .list-products .card-main{
     max-width: 100%;    

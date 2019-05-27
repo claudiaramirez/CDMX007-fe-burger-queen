@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './products.css';
 import '../total/total.css';
-
+import './products.css';
+import cancel from '../../assets/close.png';
 class Products extends Component{
     constructor(props){
         super(props);
@@ -15,6 +15,7 @@ class Products extends Component{
         this.handleClickAdded = this.handleClickAdded.bind(this);
         this.handleClickSend = this.handleClickSend.bind(this);
         this.handleClickCancel = this.handleClickCancel.bind(this);
+        this.handleClickDelete= this.handleClickDelete.bind(this);
 
     }
     
@@ -74,9 +75,17 @@ class Products extends Component{
         localStorage.clear();
         window.location.reload();
     }
-    handleClickAdded(e){
-        console.log(e)
+    handleClickAdded(){
+        // console.log('ok')
+        
+       
     }
+    handleClickDelete(item){
+        const data = this.state.itemsAdded.filter(i => i.id !== item.id)
+        console.log(data)
+        // this.setState({data})
+        // alert('ok2')
+      }
 
     render()
     {
@@ -97,11 +106,11 @@ class Products extends Component{
                     <TotalDesc/>
                     {/* lista de productos agregados */}
                     <div className="productsAdded">
-                        <div className="list-products">
+                        <div className="list-products" >
                             <ProductAdded itemsAdded={itemsAdded} handleClickAdded={this.handleClickAdded}/> 
                         </div>
                             <TotalAdded total={total}/>
-                        
+                    
                     </div>
                     {/* botones de accion  */}
                     <ButtonsOrder handleClickCancel={this.handleClickCancel} handleClickSend={this.handleClickSend}/>
@@ -164,7 +173,7 @@ class Products extends Component{
                     {/* lista de productos agregados */}
                     <div className="productsAdded">
                         <div className="list-products">
-                            <ProductAdded itemsAdded={itemsAdded} handleClickAdded={this.handleClickAdded}/> 
+                            <ProductAdded itemsAdded={itemsAdded} handleClickAdded={this.handleClickAdded} handleClickDelete={this.handleClickDelete}/> 
                         </div>
                             <TotalAdded total={total}/>
                         
@@ -178,14 +187,12 @@ class Products extends Component{
     }
 }
 
-
-
 class ProductList extends Component{
     render(){
         return(
         this.props.items.filter(item => item.type === this.props.category).map((item,i) => 
             <React.Fragment>
-                <div className="card-main">
+                <div className="card-main .products">
                     <button 
                         key={i} 
                         id={ item.id} 
@@ -221,23 +228,26 @@ class TotalDesc extends Component{
             </ul>
         )
     }
-}
+ }
  class ProductAdded extends Component{
      render(){
          return(
             this.props.itemsAdded.map((item,i) => 
-                <button className="card-main" key={i} id={item.id} onClick={this.props.handleClickAdded(this, item.id)}>
+            <div>
+                <div className="card-main" key={i} id={item.id} onClick={this.props.handleClickAdded(this, item.id)}>
                     <div className="card-content">
                         <p className="number">1</p>
                         <p className="item_product">{item.product}</p>
                         <p className="item_price">{item.price}</p>
+                        <button className="cancel-product" id={item.id} onClick={this.props.handleClickDelete}><img src={cancel} alt="delete" className="img-cancel" /></button>
                     </div>
-                </button> 
+                </div>
+            </div>     
             )  
          )
      }
  }
-
+ 
   class TotalAdded extends Component{
       render(){
           return(
@@ -247,7 +257,7 @@ class TotalDesc extends Component{
             </div>
           )
       }
-
+ 
   }
   class ButtonsOrder extends Component{
       render(){
@@ -270,6 +280,4 @@ class TotalDesc extends Component{
           )
       }
   }
-
-
   export default Products;
