@@ -1,8 +1,23 @@
 # Burger Queen
 
-Prototipo de alta fideldad
+-Diseño de app para tablet de forma horizontal.
 
+-Diseño para negocio de comida rápida, donde se toma la orden y se cobra en el mismo momento (sin servicio de mesas).
+
+-Paleta de colores para evitar fatiga visual (debido al tiempo que deben pasar en pantalla)
+-Botones grandes para ser clickeados fácilmente.
+
+-Íconos en los botones para reforzar la acción y reducir la curva de aprendizaje.
+
+-Jerarquización de productos con base a los más pedidos, para fácil ubicación y uso intuitivo.
+
+-El menú se organizo de manera que pudiesen ubicar fácilmente los productos y se tomará el pedido en el menor número de clicks posibles (debido a que en las cadenas de comida rápida hay un cronómetro para tomar los pedidos en menos de 29 segundos)
+
+Prototipo de alta fideldad
 ![iniciosesion](./src/assets/inicio.png) 
+![iniciosesion](./src/assets/productos.png) 
+![iniciosesion](./src/assets/pago.png) 
+
 
 
 ## Preámbulo
