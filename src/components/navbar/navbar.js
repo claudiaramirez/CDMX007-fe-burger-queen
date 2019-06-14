@@ -31,6 +31,8 @@ class Navbar extends Component {
       this.logout = this.logout.bind(this);
   }
   logout() {
+    localStorage.clear();
+    window.location.reload();
       fire.auth().signOut();
   }
   render() {
@@ -47,7 +49,6 @@ class Navbar extends Component {
                  <li className="item-menu"><NavLink className="nav-menu_link" activeClassName="activate" to="/drinks">Bebidas</NavLink></li>
                  <li className="item-menu"><NavLink className="nav-menu_link" activeClassName="activate" to="/complements">Complementos</NavLink></li>                   
                  <li className="item-menu"><NavLink className="nav-menu_link logout"> <a onClick={this.logout}>Cerrar Sesión</a></NavLink></li>                   
-                 
                </ul>
              </div>
          </nav> 
