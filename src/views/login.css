@@ -58,3 +58,7 @@ form{
 .registrer{
     text-align: right;
 }
+.registrer-demo{
+    text-align: right;
+    font-size: .8rem;
+}
